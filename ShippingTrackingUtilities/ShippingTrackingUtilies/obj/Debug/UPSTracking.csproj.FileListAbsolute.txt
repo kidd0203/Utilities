@@ -1,0 +1,34 @@
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\bin\Debug\UPSTracking.exe.config
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\bin\Debug\UPSTracking.exe
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\bin\Debug\UPSTracking.pdb
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\obj\Debug\UPSTracking.exe
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\obj\Debug\UPSTracking.pdb
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.dll
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.xml
+c:\users\jiang\documents\visual studio 2012\Projects\UPSTracking\UPSTracking\obj\Debug\UPSTracking.csprojResolveAssemblyReference.cache
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe.config
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.exe
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.csprojResolveAssemblyReference.cache
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe.config
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.exe
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.pdb
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.pdb
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.dll
+Z:\Dev_Team\Members\miriam\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.xml
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe.config
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.exe
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.pdb
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.exe
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\bin\Debug\UPSTracking.pdb
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.dll
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\bin\Debug\Newtonsoft.Json.xml
+Z:\Dev_Team\Members\Jiang\USPSnUPSTracking\UPSTracking\obj\Debug\UPSTracking.csprojResolveAssemblyReference.cache
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\UPSTracking\bin\Debug\UPSTracking.exe.config
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\UPSTracking\obj\Debug\UPSTracking.exe
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\UPSTracking\obj\Debug\UPSTracking.pdb

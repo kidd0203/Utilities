@@ -1,0 +1,24 @@
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.dll
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.dll
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Documents\Visual Studio 2012\Projects\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.dll
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Desktop\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache

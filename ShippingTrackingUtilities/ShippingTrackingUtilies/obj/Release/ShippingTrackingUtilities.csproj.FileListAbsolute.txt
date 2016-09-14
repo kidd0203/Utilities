@@ -1,0 +1,5 @@
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Release\ShippingTrackingUtilities.dll.config
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Release\ShippingTrackingUtilities.dll
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Release\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Release\ShippingTrackingUtilities.dll
+C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Release\ShippingTrackingUtilities.pdb
