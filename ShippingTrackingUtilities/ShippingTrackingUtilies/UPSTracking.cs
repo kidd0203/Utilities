@@ -136,6 +136,7 @@ namespace ShippingTrackingUtilities
                         shippingResult.Delivered = true;
                         shippingResult.StatusSummary = shipment.Package[0].Activity[0].ActivityLocation[0].Description;
                         shippingResult.DeliveredDateTime = shipment.Package[0].Activity[0].Date + " " + shipment.Package[0].Activity[0].Time;
+                        shippingResult.SignatureName = string.IsNullOrEmpty(shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName) ? "" : shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName;
                     }
 
 

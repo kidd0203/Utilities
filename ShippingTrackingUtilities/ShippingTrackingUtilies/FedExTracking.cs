@@ -56,7 +56,11 @@ namespace ShippingTrackingUtilities
                 shippingResult.ServiceType = resultMessage.TrackDetails[0].ServiceType;
 
                 if (shippingResult.Delivered)
+                {
                     shippingResult.DeliveredDateTime = !string.IsNullOrEmpty(resultMessage.TrackDetails[0].ActualDeliveryTimestamp) ? resultMessage.TrackDetails[0].ActualDeliveryTimestamp : "";
+                    // by CJ on Oct-05-2016 to include Signature.
+                    shippingResult.SignatureName = !string.IsNullOrEmpty(resultMessage.TrackDetails[0].DeliverySignatureName) ? resultMessage.TrackDetails[0].DeliverySignatureName : "";
+                }
                 else
                     shippingResult.ScheduledDeliveryDate = !string.IsNullOrEmpty(resultMessage.TrackDetails[0].EstimatedDeliveryTimestamp) ? resultMessage.TrackDetails[0].EstimatedDeliveryTimestamp : "";
 

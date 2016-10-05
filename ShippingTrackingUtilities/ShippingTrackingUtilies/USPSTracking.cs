@@ -130,6 +130,9 @@ namespace ShippingTrackingUtilities
                         {
                             shippingResult.DeliveredDateTime = item.EventDate + " " + item.EventTime;
 
+                            //by CJ on Oct-05-2016, to have the signatureName.
+                            shippingResult.SignatureName = string.IsNullOrEmpty(item.Name) ? "" : item.Name;
+
                             break;
                         }
                     }

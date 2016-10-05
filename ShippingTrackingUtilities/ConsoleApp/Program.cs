@@ -19,7 +19,8 @@ namespace ConsoleApp
 
             try
             {
-                utilities.GetTrackingResult("010425715172328");
+                utilities.GetTrackingResult("1Z7R3F940396420819");
+                
                 var result = utilities.ShippingResult;
 
             }

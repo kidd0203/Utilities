@@ -800,6 +800,8 @@
 
         private string descriptionField;
 
+        private string signedForByNameField;
+
         private Address[] addressField;
 
         /// <remarks/>
@@ -827,6 +829,20 @@
             set
             {
                 this.descriptionField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string SignedForByName
+        {
+            get
+            {
+                return this.signedForByNameField;
+            }
+            set
+            {
+                this.signedForByNameField = value;
             }
         }
 

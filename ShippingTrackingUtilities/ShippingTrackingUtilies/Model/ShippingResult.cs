@@ -17,6 +17,7 @@ namespace ShippingTrackingUtilities
 
         public string DeliveredDateTime { get; set; }
 
+        public string SignatureName { get; set; }
         public ShippingResult()
         {
             Delivered = false;
@@ -30,6 +31,7 @@ namespace ShippingTrackingUtilities
             DeliveredDateTime = string.Empty;
             // TrackingDetails = new List<USPSTrackingResult.TrackResponseTrackInfoTrackDetail>();
             TrackingDetails = new List<ShippingResultEventDetail>();
+            SignatureName = string.Empty;
         }
 
         public List<ShippingResultEventDetail> TrackingDetails { get; set; }
