@@ -14,12 +14,12 @@ namespace ConsoleApp
             ConnectionString.SetupFedExCredential("YourFedexUserKey", "YourFedexPassword");
             ConnectionString.SetupUSPSCredential("YourUSPSUserID");
             ConnectionString.SetupUPSCredential("YourUPSLicenseNo");
-
+            
             TrackingUtilities utilities = new TrackingUtilities();
 
             try
             {
-                utilities.GetTrackingResult("1Z7R3F940396420819");
+                utilities.GetTrackingResult("1Z7R3F940390944345");
                 
                 var result = utilities.ShippingResult;
 
