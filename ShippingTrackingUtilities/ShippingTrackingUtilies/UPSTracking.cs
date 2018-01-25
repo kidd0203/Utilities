@@ -12,6 +12,7 @@ namespace ShippingTrackingUtilities
         public UPSTracking(string trackingNumber)
         {
             this.trackingNumber = trackingNumber;
+	    ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
         }
 
         public ShippingResult GetTrackingResult()
