@@ -1,8 +1,0 @@
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Release\ConsoleApp.exe.config
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Release\ConsoleApp.exe
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Release\ConsoleApp.pdb
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Release\ShippingTrackingUtilities.dll
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\bin\Release\ShippingTrackingUtilities.pdb
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Release\ConsoleApp.csprojResolveAssemblyReference.cache
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Release\ConsoleApp.exe
-C:\Users\jiang\Documents\gits\zuckers_ancillary\ShippingTrackingUtilities\ConsoleApp\obj\Release\ConsoleApp.pdb
