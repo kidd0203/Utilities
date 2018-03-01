@@ -1,4 +1,8 @@
-﻿using System;
+// Copyright (c) 2018 Aaron Lord/devlords cooperative
+// Copyright (c) 2016 Jiang/kidd0203
+// Licensed under GNU GPLv3. See the LICENSE text file in the project root for license information.
+
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
