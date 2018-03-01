@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\UPSTrackingResult.cs" />
     <Compile Include="Model\USPSTrackingResult.cs" />
+    <Compile Include="ShippingTrackingException.cs" />
     <Compile Include="TrackingUtilities.cs" />
     <Compile Include="UPSTracking.cs" />
     <Compile Include="USPSTracking.cs" />

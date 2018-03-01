@@ -3,22 +3,30 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Xml.Serialization;
+
 namespace ShippingTrackingUtilities
 {
-    public class UPSTracking :ITrackingFacility
+    public class UPSTracking : ITrackingFacility
     {
         string trackingNumber;
 
         public UPSTracking(string trackingNumber)
         {
             this.trackingNumber = trackingNumber;
-	    ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
         }
 
         public ShippingResult GetTrackingResult()
         {
             ShippingResult shippingResult = new ShippingResult();
             string shippingResultInString = GetTrackingInfoUPSInString();
+
+            if (shippingResultInString.Contains("<ResponseStatusDescription>Failure</ResponseStatusDescription>")
+                && shippingResultInString.Contains("<Error><ErrorSeverity>Hard</ErrorSeverity>"))
+            {
+                throw new ShippingTrackingException("UPS API ERROR", shippingResultInString);
+            }
+
             XmlSerializer serializer = new XmlSerializer(typeof(UPSTrackingResult.TrackResponse));
             MemoryStream memStream = new MemoryStream(Encoding.UTF8.GetBytes(shippingResultInString));
 
@@ -89,7 +97,7 @@ namespace ShippingTrackingUtilities
             string xml1 = "<?xml version=\"1.0\"?>" +
             "<AccessRequest xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" +
             @"	<Password>%PASSWORD%</Password>
-	            <UserId>%USERID%</UserId>
+                <UserId>%USERID%</UserId>
             <AccessLicenseNumber>%ACCESSLICENSENUMBER%</AccessLicenseNumber>
             </AccessRequest>";
 
@@ -97,14 +105,14 @@ namespace ShippingTrackingUtilities
 
             string xml2 = @"<?xml version='1.0'?>
             <TrackRequest>
-	            <Request>
-		            <TransactionReference>
-			
-		            </TransactionReference>
-		            <RequestAction>Track</RequestAction>
-		            <RequestOption>0</RequestOption>
-	            </Request>
-	            <TrackingNumber>%TN%</TrackingNumber>
+                <Request>
+                    <TransactionReference>
+            
+                    </TransactionReference>
+                    <RequestAction>Track</RequestAction>
+                    <RequestOption>0</RequestOption>
+                </Request>
+                <TrackingNumber>%TN%</TrackingNumber>
             </TrackRequest>";
 
             //string raw_response = UPSRequest(
