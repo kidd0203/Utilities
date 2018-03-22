@@ -17,7 +17,7 @@ namespace ShippingTrackingUtilities.Utilities
                 StreamWriter sw = new StreamWriter(@"ZuckersReport_ErrorLog.txt", true);
                 sw.WriteLine("");
                 sw.WriteLine("");
-                sw.WriteLine(DateTime.Now.ToString());
+                sw.WriteLine(DateTime.UtcNow.ToString());
                 sw.WriteLine("Error Message: " + ex.Message);
                 sw.WriteLine("STrace: " + ex.StackTrace);
                 if (ex.InnerException != null)
@@ -26,8 +26,8 @@ namespace ShippingTrackingUtilities.Utilities
                 sw.Close();
 
                 //put the current exeption message into the Message Variable to send email...
-                Utils.sbErrMsgs.Append(DateTime.Now.ToString() + ex.Message + "\n");
-                Utils.sbErrMsgs.Append(DateTime.Now.ToString() + ex.StackTrace + "\n");
+                Utils.sbErrMsgs.Append(DateTime.UtcNow.ToString() + ex.Message + "\n");
+                Utils.sbErrMsgs.Append(DateTime.UtcNow.ToString() + ex.StackTrace + "\n");
             }
             catch { }
         }
