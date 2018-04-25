@@ -15,9 +15,7 @@
         public void GetTrackingResult(string trackingNo)
         {
             shippingResult = new ShippingResult();
-
-            string shippingResultInString = string.Empty;
-
+            
             if (!string.IsNullOrEmpty(trackingNo))
             {
                 CarrierName carrier = GetCarrierName(trackingNo);
