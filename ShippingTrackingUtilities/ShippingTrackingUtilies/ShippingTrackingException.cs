@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ShippingTrackingUtilities
 {
+    [Serializable]
     public class ShippingTrackingException : Exception
     {
         public string ResponseXml { get; }
@@ -16,6 +18,9 @@ namespace ShippingTrackingUtilities
         {
         }
 
+        protected ShippingTrackingException (SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+            
         public override string ToString()
         {
             return $"{nameof(ResponseXml)}: {ResponseXml}\r\n{base.ToString()}";

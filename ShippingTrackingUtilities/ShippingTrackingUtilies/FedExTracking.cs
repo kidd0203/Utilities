@@ -8,7 +8,7 @@ namespace ShippingTrackingUtilities
 {
     public class FedExTracking : ITrackingFacility
     {
-        string trackingNumber;
+        private readonly string trackingNumber;
 
         public FedExTracking(string trackingNumber)
         {
