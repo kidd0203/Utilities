@@ -6,6 +6,7 @@ using System.Threading;
 using System.Xml.Serialization;
 using ShippingTrackingUtilities.UPSTrackingResult;
 
+#pragma warning disable S1075 // URIs should not be hardcoded
 namespace ShippingTrackingUtilities
 {
     public class UPSTracking : ITrackingFacility
@@ -31,11 +32,8 @@ namespace ShippingTrackingUtilities
             }
 
             var serializer = new XmlSerializer(typeof(TrackResponse));
-            var memStream = new MemoryStream(Encoding.UTF8.GetBytes(shippingResultInString));
-
-            var resultingMessage = new TrackResponse();
-
-            if (memStream != null)
+            TrackResponse resultingMessage;
+            using (var memStream = new MemoryStream(Encoding.UTF8.GetBytes(shippingResultInString)))
             {
                 resultingMessage = (TrackResponse) serializer.Deserialize(memStream);
             }
@@ -87,7 +85,7 @@ namespace ShippingTrackingUtilities
 
                     call_succeeded = true;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     Thread.Sleep(200);
                 }
@@ -144,33 +142,26 @@ namespace ShippingTrackingUtilities
                 shippingResult.StatusCode = shipment.Package[0].Activity[0].Status[0].StatusType[0].Code;
                 shippingResult.Status = shipment.Package[0].Activity[0].Status[0].StatusType[0].Description;
 
-                if (!string.IsNullOrEmpty(shippingResult.StatusCode))
+                if (!string.IsNullOrEmpty(shippingResult.StatusCode) && shippingResult.StatusCode == "D")
                 {
-                    if (shippingResult.StatusCode == "D")
-                    {
-                        shippingResult.Delivered = true;
-                        shippingResult.StatusSummary = shipment.Package[0].Activity[0].ActivityLocation[0].Description;
-                        shippingResult.DeliveredDateTime =
-                            shipment.Package[0].Activity[0].Date + " " + shipment.Package[0].Activity[0].Time;
-                        shippingResult.SignatureName =
-                            string.IsNullOrEmpty(shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName)
-                                ? ""
-                                : shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName;
-                    }
+                    shippingResult.Delivered = true;
+                    shippingResult.StatusSummary = shipment.Package[0].Activity[0].ActivityLocation[0].Description;
+                    shippingResult.DeliveredDateTime =
+                        shipment.Package[0].Activity[0].Date + " " + shipment.Package[0].Activity[0].Time;
+                    shippingResult.SignatureName =
+                        string.IsNullOrEmpty(shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName)
+                            ? ""
+                            : shipment.Package[0].Activity[0].ActivityLocation[0].SignedForByName;
                 }
-
-
-                if (!string.IsNullOrEmpty(shippingResult.StatusCode))
+                
+                if (!string.IsNullOrEmpty(shippingResult.StatusCode) && shippingResult.StatusCode != "D")
                 {
-                    if (shippingResult.StatusCode != "D")
-                    {
-                        shippingResult.PickupDate = shipment.PickupDate;
-                        shippingResult.ScheduledDeliveryDate = shipment.ScheduledDeliveryDate;
+                    shippingResult.PickupDate = shipment.PickupDate;
+                    shippingResult.ScheduledDeliveryDate = shipment.ScheduledDeliveryDate;
 
-                        if (shipment.Package[0].Message != null)
-                        {
-                            shippingResult.Message = shipment.Package[0].Message[0].Description;
-                        }
+                    if (shipment.Package[0].Message != null)
+                    {
+                        shippingResult.Message = shipment.Package[0].Message[0].Description;
                     }
                 }
             }

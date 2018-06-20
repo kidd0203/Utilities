@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Xml.Serialization;
 
+#pragma warning disable S1075 // URIs should not be hardcoded
 namespace ShippingTrackingUtilities
 {
     public class FedExTracking : ITrackingFacility
@@ -64,20 +65,17 @@ namespace ShippingTrackingUtilities
                 else
                     shippingResult.ScheduledDeliveryDate = !string.IsNullOrEmpty(resultMessage.TrackDetails[0].EstimatedDeliveryTimestamp) ? resultMessage.TrackDetails[0].EstimatedDeliveryTimestamp : "";
 
-                if (resultMessage.TrackDetails[0].Events != null)
+                if (resultMessage.TrackDetails[0].Events != null && resultMessage.TrackDetails[0].Events.Length>0)
                 {
-                    if(resultMessage.TrackDetails[0].Events.Length>0)
+                    foreach (var detail in resultMessage.TrackDetails[0].Events)
                     {
-                        foreach (var detail in resultMessage.TrackDetails[0].Events)
-                        {
-                            ShippingResultEventDetail eventDetail = new ShippingResultEventDetail();
-                            eventDetail.Event = detail.EventType + " " + detail.EventDescription; ;
-                            eventDetail.EventDateTime = detail.Timestamp;
-                            if (detail.Address !=null)
-                                eventDetail.EventAddress = detail.Address[0].City + " " + detail.Address[0].StateOrProvinceCode + " " + detail.Address[0].PostalCode;
+                        ShippingResultEventDetail eventDetail = new ShippingResultEventDetail();
+                        eventDetail.Event = detail.EventType + " " + detail.EventDescription;
+                        eventDetail.EventDateTime = detail.Timestamp;
+                        if (detail.Address !=null)
+                            eventDetail.EventAddress = detail.Address[0].City + " " + detail.Address[0].StateOrProvinceCode + " " + detail.Address[0].PostalCode;
 
-                            shippingResult.TrackingDetails.Add(eventDetail);
-                        }
+                        shippingResult.TrackingDetails.Add(eventDetail);
                     }
                 }
             }
@@ -87,7 +85,7 @@ namespace ShippingTrackingUtilities
 
         private string GetTrackingInfoFedExInString()
         {
-            string apiUrl = "https://gatewaybeta.fedex.com:443/xml"; 
+            string apiUrl = "https://gatewaybeta.fedex.com:443/xml";
 
             string xml = @"<TrackRequest xmlns='http://fedex.com/ws/track/v3'>"
                 + @"<WebAuthenticationDetail>"
@@ -154,7 +152,7 @@ namespace ShippingTrackingUtilities
 
                     call_succeeded = true;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     System.Threading.Thread.Sleep(200);
                 }

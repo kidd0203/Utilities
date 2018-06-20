@@ -54,7 +54,7 @@ namespace ShippingTrackingUtilities
                 var usps = new StringBuilder(BASEURL).AppendFormat(
                     "?API=TrackV2&XML=<TrackFieldRequest USERID=\"{0}\">", USPS_USERID);
                 usps.Append("<Revision>1</Revision>");
-                // Bug: Don't use 127.0.0.1
+                // TODO: Don't use 127.0.0.1
                 usps.Append("<ClientIp>" + "127.0.0.1" + "</ClientIp>");
                 usps.Append("<SourceId>" + "SV" + "</SourceId>");
                 usps.Append("<TrackID ID=\"" + trackingNumber + "\"></TrackID>");
