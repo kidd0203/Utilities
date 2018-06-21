@@ -34,7 +34,7 @@ namespace ShippingTrackingUtilities
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(USPSTrackingResult.TrackResponse));
                     var resultingMessage = (USPSTrackingResult.TrackResponse)serializer.Deserialize(memStream);
-                    shippingResult = USPSTrackingResultWrap(resultingMessage);
+                    shippingResult = UspsTrackingResultWrap(resultingMessage);
                 }
             }
 
@@ -54,12 +54,13 @@ namespace ShippingTrackingUtilities
                 var usps = new StringBuilder(BASEURL).AppendFormat(
                     "?API=TrackV2&XML=<TrackFieldRequest USERID=\"{0}\">", USPS_USERID);
                 usps.Append("<Revision>1</Revision>");
-                // TODO: Don't use 127.0.0.1
-                usps.Append("<ClientIp>" + "127.0.0.1" + "</ClientIp>");
+
+                var localIp = GetIPAddress();
+
+                usps.Append("<ClientIp>" + localIp + "</ClientIp>");
                 usps.Append("<SourceId>" + "SV" + "</SourceId>");
                 usps.Append("<TrackID ID=\"" + trackingNumber + "\"></TrackID>");
                 usps.Append("</TrackFieldRequest>");
-
 
                 byte[] responseData;
                 using (WebClient wsClient = new WebClient())
@@ -84,6 +85,22 @@ namespace ShippingTrackingUtilities
 
         }
 
+        private static string GetIPAddress()
+        {
+            var localIp = "127.0.0.1";
+            foreach (var localIPs in Dns.GetHostAddresses(Dns.GetHostName()))
+            {
+                if (IPAddress.IsLoopback(localIPs))
+                {
+                    continue;
+                }
+
+                localIp = localIPs.ToString();
+            }
+
+            return localIp;
+        }
+
         private ShippingResult USPSTrackingResultErrorWrap(USPSTrackingResultError.Error resultingMessage)
         {
             ShippingResult shippingResult = new ShippingResult();
@@ -95,7 +112,7 @@ namespace ShippingTrackingUtilities
             return shippingResult;
         }
 
-        private ShippingResult USPSTrackingResultWrap(USPSTrackingResult.TrackResponse resultingMessage)
+        private ShippingResult UspsTrackingResultWrap(USPSTrackingResult.TrackResponse resultingMessage)
         {
             ShippingResult shippingResult = new ShippingResult();
 

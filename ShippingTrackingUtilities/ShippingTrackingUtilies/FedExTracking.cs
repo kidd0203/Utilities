@@ -104,12 +104,12 @@ namespace ShippingTrackingUtilities
                 + @"<IncludeDetailedScans>1</IncludeDetailedScans>"
                 + @"</TrackRequest>";
 
-            string raw_response = UPSRequest(apiUrl,
+            string rawResponse = UPSRequest(apiUrl,
                 xml.Replace("%ACC_KEY%", ConnectionString.FEDEX_USER_KEY).
                     Replace("%ACC_PASSWORD%", ConnectionString.FEDEX_USER_PASSWORD).
                     Replace("%TRACKINGNO%", trackingNumber));
 
-            return raw_response;
+            return rawResponse;
         }
 
         private string UPSRequest(string url, string requestText)
