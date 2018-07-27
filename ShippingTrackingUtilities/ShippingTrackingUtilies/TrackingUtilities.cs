@@ -1,17 +1,15 @@
-﻿using System;
-using System.IO;
-using System.Net;
-using System.Text;
-using System.Xml.Serialization;
+﻿// Copyright (c) 2018 Aaron Lord/devlords cooperative
+// Copyright (c) 2016 Jiang/kidd0203
+// Licensed under GNU GPLv3. See the LICENSE text file in the project root for license information.
 
 namespace ShippingTrackingUtilities
 {
-    public enum CarrierName { USPS =0, UPS= 1,FedEx =2}
+    public enum CarrierName { USPS = 0, UPS = 1, FedEx = 2 }
 
     public class TrackingUtilities
     {
         ITrackingFacility trackingFacility;
-        
+
         private ShippingResult shippingResult;
 
         public ShippingResult ShippingResult { get { return shippingResult; } }
@@ -21,12 +19,10 @@ namespace ShippingTrackingUtilities
         public void GetTrackingResult(string trackingNo)
         {
             shippingResult = new ShippingResult();
-
-            string shippingResultInString = string.Empty;
-
+            
             if (!string.IsNullOrEmpty(trackingNo))
             {
-                CarrierName carrier = getCarrierName(trackingNo);
+                CarrierName carrier = GetCarrierName(trackingNo);
 
                 CredentialValidation(carrier);
 
@@ -50,7 +46,7 @@ namespace ShippingTrackingUtilities
             }
         }
 
-        private CarrierName getCarrierName(string trackingNo)
+        private CarrierName GetCarrierName(string trackingNo)
         {
             CarrierName carrierName = CarrierName.USPS;
 
@@ -83,17 +79,17 @@ namespace ShippingTrackingUtilities
             if (carrier == CarrierName.FedEx)
             {
                 if (!HasFedExCredentialSetup())
-                    throw new Exception("Please setup fedex credential first, before tracking fedex package.");
+                    throw new ShippingTrackingException("Please setup fedex credential first, before tracking fedex package.");
             }
             else if (carrier == CarrierName.USPS)
             {
                 if (!HasUSPSCredentialSetup())
-                    throw new Exception("Please setup USPS credential first, before tracking USPS package.");
+                    throw new ShippingTrackingException("Please setup USPS credential first, before tracking USPS package.");
             }
             else
             {
                 if (!HasUPSCredentialSetup())
-                    throw new Exception("Please setup UPS credential first, before tracking UPS package.");
+                    throw new ShippingTrackingException("Please setup UPS credential first, before tracking UPS package.");
             }
         }
 
@@ -112,45 +108,6 @@ namespace ShippingTrackingUtilities
         {
             return !string.IsNullOrEmpty(ConnectionString.UPS_ACCESS_LICENSE_NO);
         }
-
-        //public string GetTrackingResultInString(string trackingNo)
-        //{
-        //    shippingResult = GetTrackingResult(trackingNo);
-
-        //    return ConvertTrackingResultIntoString();
-
-        //    //string result = "Delivered: " + shippingResult.Delivered;
-        //    //result += "\n\nService Type: " + shippingResult.ServiceType;
-        //    //result += "\nStatusCode: " + shippingResult.StatusCode + " " + "Status: " + shippingResult.Status;
-        //    //result += "\nSummary: " + shippingResult.StatusSummary;
-
-        //    //if (shippingResult.Delivered)
-        //    //    result += "\nDelivered On: " + shippingResult.DeliveredDateTime;
-        //    //else
-        //    //{
-        //    //    if (!string.IsNullOrEmpty(shippingResult.Message))
-        //    //        result += "\nMessage: " + shippingResult.Message;
-        //    //    if (!string.IsNullOrEmpty(shippingResult.ScheduledDeliveryDate))
-        //    //        result += "\nScheduled Delivery Date: " + shippingResult.ScheduledDeliveryDate;
-        //    //}
-
-        //    //if (ConnectionString.ToShowDetails)
-        //    //{
-        //    //    if (shippingResult.TrackingDetails.Count > 0)
-        //    //    {
-        //    //        result += "\n\nTracking Details: ";
-
-        //    //        foreach (var detail in shippingResult.TrackingDetails)
-        //    //        {
-        //    //            result += "\nEventDateTime: " + detail.EventDateTime;
-        //    //            result += " Event: " + detail.Event;
-        //    //            result += "\nEvent Address: " + detail.EventAddress;
-        //    //        }
-        //    //    }
-        //    //}
- 
-        //    //return result;
-        //}
 
         private string ConvertTrackingResultIntoString()
         {
@@ -192,7 +149,7 @@ namespace ShippingTrackingUtilities
             {
                 result = "No result found.";
             }
-           
+
 
             return result;
         }
