@@ -8,6 +8,8 @@
 
         internal static string FEDEX_USER_KEY = "";
         internal static string FEDEX_USER_PASSWORD = "";
+        internal static string FEDEX_ACCOUNTNUMBER = "";
+        internal static string FEDEX_METERNUMBER = "";
 
         internal static bool ToShowDetails = false;
 
@@ -20,10 +22,12 @@
             UPS_ACCESS_LICENSE_NO = licenseNO;
         }
 
-        public static void SetupFedExCredential(string userKey, string password)
+        public static void SetupFedExCredential(string userKey, string password, string accountnumber, string meternumber)
         {
             FEDEX_USER_KEY = userKey;
             FEDEX_USER_PASSWORD = password;
+            FEDEX_ACCOUNTNUMBER = accountnumber;
+            FEDEX_METERNUMBER = meternumber;
         }
     }
 }

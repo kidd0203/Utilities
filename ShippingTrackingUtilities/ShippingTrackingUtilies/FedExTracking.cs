@@ -87,7 +87,7 @@ namespace ShippingTrackingUtilities
 
         private string GetTrackingInfoFedExInString()
         {
-            string apiUrl = "https://gatewaybeta.fedex.com:443/xml"; 
+            string apiUrl = "https://gateway.fedex.com:443/xml"; 
 
             string xml = @"<TrackRequest xmlns='http://fedex.com/ws/track/v3'>"
                 + @"<WebAuthenticationDetail>"
@@ -109,7 +109,9 @@ namespace ShippingTrackingUtilities
             string raw_response = UPSRequest(apiUrl,
                 xml.Replace("%ACC_KEY%", ConnectionString.FEDEX_USER_KEY).
                     Replace("%ACC_PASSWORD%", ConnectionString.FEDEX_USER_PASSWORD).
-                    Replace("%TRACKINGNO%", trackingNumber));
+                    Replace("%TRACKINGNO%", trackingNumber).
+                    Replace("%ACC_NUMBER%",ConnectionString.FEDEX_ACCOUNTNUMBER).
+                    Replace("%ACC_METER_NUMBER%", ConnectionString.FEDEX_METERNUMBER));
 
             return raw_response;
         }
