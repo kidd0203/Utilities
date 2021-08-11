@@ -30,3 +30,11 @@ C:\jiangchen\GitRepositories\ShippingTrackingUtilities\ConsoleApp\bin\Debug\Ship
 C:\jiangchen\GitRepositories\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
 C:\jiangchen\GitRepositories\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.exe
 C:\jiangchen\GitRepositories\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.dll
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\bin\Debug\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
