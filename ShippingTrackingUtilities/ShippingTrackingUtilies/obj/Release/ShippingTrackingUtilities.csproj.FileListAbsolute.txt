@@ -8,3 +8,4 @@ C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrac
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Release\ShippingTrackingUtilities.pdb
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Release\ShippingTrackingUtilities.dll
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Release\ShippingTrackingUtilities.pdb
+C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Release\ShippingTrackingUtilities.csprojResolveAssemblyReference.cache
