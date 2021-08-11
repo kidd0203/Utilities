@@ -84,7 +84,8 @@ namespace ShippingTrackingUtilities
 
         private string GetTrackingInfoUPSInString()
         {
-            string apiUrl = "https://www.ups.com/ups.app/xml/Track"; // "https://wwwcie.ups.com/ups.app/xml/Track";
+            string apiUrl = "https://onlinetools.ups.com/ups.app/xml/Track"; 
+            //string apiUrl = "https://www.ups.com/ups.app/xml/Track"; // "https://wwwcie.ups.com/ups.app/xml/Track";
 
             string xml1 = "<?xml version=\"1.0\"?>" +
             "<AccessRequest xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" +
