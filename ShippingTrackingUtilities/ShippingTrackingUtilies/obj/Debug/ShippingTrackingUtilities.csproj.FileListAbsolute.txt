@@ -28,6 +28,5 @@ C:\Users\jiang\Desktop\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Deb
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Debug\ShippingTrackingUtilities.dll.config
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Debug\ShippingTrackingUtilities.dll
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\bin\Debug\ShippingTrackingUtilities.pdb
-C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Debug\ShippingTrackingUtilities.csprojResolveAssemblyReference.cache
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Debug\ShippingTrackingUtilities.dll
 C:\Users\jiang\Documents\GitHub\Utilities\ShippingTrackingUtilities\ShippingTrackingUtilies\obj\Debug\ShippingTrackingUtilities.pdb
